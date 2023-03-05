@@ -1,6 +1,6 @@
 # Blood-Donation-Prediction
 
-Predicting Potential Blood Donors based on past donation behaviour
+Predicting potential blood donors based on past donation behaviour
 
 
 # Problem Statement
