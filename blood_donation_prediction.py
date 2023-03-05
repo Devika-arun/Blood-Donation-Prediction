@@ -207,44 +207,5 @@ import pickle
 # Saving model to disk
 pickle.dump(logreg, open('model.pkl','wb'))
 
-'''
-# Loading model to compare the results
-model = pickle.load(open('model.pkl', 'rb'))
-
-import joblib
-joblib.dump(logreg, 'model.pkl')
-
-import streamlit as st
-import joblib
-import pandas as pd
-
-st.write("Blood Donation Prediction")
-
-
-Recency = st.number_input("Enter R")
-Frequency = st.number_input("Enter F")
-Monetary = st.number_input("Enter M")
-Time = st.number_input("Enter T")
-
-#st.button('predict_Donor', key = "<uniquevalueofsomesort>")
-
-pred = pd.DataFrame([[Recency,Frequency,Monetary,Time]], columns= ['Recency','Frequency','Monetary','Time'])
-
-model = joblib.load('model.pkl')
-prediction = model.predict(pred)
-print(prediction)
-
-if st.button('predict_Donor', key = "<uniquevalueofsomesort>"):
-
-    if(prediction[0] == 0):
-        st.write('<p class="big-font">person will not donate</p>',unsafe_allow_html=True)
-
-    else:
-        st.write('<p class="big-font">person will donate</p>',unsafe_allow_html=True)
-
-
-
-
 
 """Now we can approach the people who are interested in donating blood and which will results in getting more volunteers and we can save more people."""
-'''
